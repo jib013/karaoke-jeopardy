@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeopardy Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Jeopardy Game</h1>
+  <div class="score-board">
+    <p>Score: <span id="score">0</span></p>
+  </div>
+  <div id="game-board"></div>
+  <div id="question-modal" class="hidden">
+    <div class="modal-content">
+      <p id="question"></p>
+      <button onclick="revealAnswer()">Reveal Answer</button>
+      <button onclick="closeModal(true)">Correct</button>
+      <button onclick="closeModal(false)">Incorrect</button>
+    </div>
+  </div>
+  <div id="answer-modal" class="hidden">
+    <div class="modal-content">
+      <p id="answer"></p>
+      <button onclick="closeAnswerModal()">Close</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
