@@ -19,14 +19,6 @@
     margin: 20px;
   }
   
-
-
-
-
-
-
-
-
   /* Game board container */
   #game-board {
     display: grid;
@@ -49,8 +41,8 @@
   
   /* Category header cell */
   .category {
-    background-color: #444;
-    color: #ffd700; /* Gold color for the category names */
+    background-color: blue;
+    color: #fff;
     font-size: 1.2rem;
     font-weight: bold;
     padding: 10px;
