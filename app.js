@@ -59,7 +59,8 @@ const categories = [
       { question: "The Boy Is Mine - Brandy & Monica", answer: "Brandy & Monica", points: 900 },
       { question: "Somebody That I Used To Know - Gotye & Kimbra", answer: "Gotye & Kimbra", points: 1000 }
     ]},
-    { name: "Disney/Musicals", questions: [
+
+    { name: "Disney & Musicals", questions: [
         { question: "Can you feel the love tonight? - Lion King", answer: "Lion King", points: 100 },
         { question: "Under the Sea - The Little Mermaid", answer: "The Little Mermaid", points: 200 },
         { question: "The Bare Necessities - The Jungle Book", answer: "The Jungle Book", points: 300 },
