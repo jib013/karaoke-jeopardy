@@ -41,11 +41,12 @@
   
   /* Category header cell */
   .category {
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    justify-content: center; /* Horizontally centers the content */
     background-color: blue;
-    color: #fff;
     font-size: 1.2rem;
     font-weight: bold;
-    padding: 20px;
     text-align: center;
     width: 100%;
     border: 2px solid #666;
@@ -68,7 +69,6 @@
   /* Hover effect for question cells */
   .question:hover {
     background-color: #004080;
-    color: #ffd700; /* Change to gold color on hover */
   }
   
   /* Modal for question content (if you want to style the question pop-up) */
