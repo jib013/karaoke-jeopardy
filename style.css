@@ -86,7 +86,14 @@
   }
 
   #close-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #fff;
+    color: #000;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
   }
   
   /* Optional overlay behind modal */
