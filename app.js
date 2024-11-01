@@ -116,6 +116,10 @@ const categories = [
     document.getElementById("answer-modal").classList.remove("hidden");
   }
   
+  function closeModalWindow() {
+    document.getElementById("question-modal").classList.add("hidden");
+  }
+
   function closeModal(correct) {
     if (correct) {
       score += currentQuestion.points;
