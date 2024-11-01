@@ -35,14 +35,17 @@ const categories = [
   let currentQuestion = null;
   
   function setupBoard() {
+    console.log("start board setup");
     const gameBoard = document.getElementById("game-board");
   
+    console.log("set categories");
     categories.forEach(category => {
       const categoryCell = document.createElement("div");
       categoryCell.classList.add("category");
       categoryCell.innerText = category.name;
       gameBoard.appendChild(categoryCell);
   
+      console.log("set questions");
       category.questions.forEach(question => {
         const questionCell = document.createElement("div");
         questionCell.classList.add("question");
