@@ -41,27 +41,33 @@ const categories = [
   let currentQuestion = null;
   
   function setupBoard() {
-    console.log("start board setup");
     const gameBoard = document.getElementById("game-board");
   
-    console.log("set categories");
     categories.forEach(category => {
+      // Create a container for the category and its questions
+      const categoryContainer = document.createElement("div");
+      categoryContainer.classList.add("category-container");
+  
+      // Create and style the category cell as a header for the category
       const categoryCell = document.createElement("div");
       categoryCell.classList.add("category");
       categoryCell.innerText = category.name;
-      gameBoard.appendChild(categoryCell);
+      categoryContainer.appendChild(categoryCell);
   
-      console.log("set questions");
+      // Create a cell for each question and add it to the category container
       category.questions.forEach(question => {
         const questionCell = document.createElement("div");
         questionCell.classList.add("question");
         questionCell.innerText = `$${question.points}`;
         questionCell.onclick = () => openQuestionModal(question);
-        gameBoard.appendChild(questionCell);
+        categoryContainer.appendChild(questionCell);
       });
+  
+      // Add the entire category container to the game board
+      gameBoard.appendChild(categoryContainer);
     });
   }
-  
+    
   function openQuestionModal(question) {
     currentQuestion = question;
     document.getElementById("question").innerText = question.question;
