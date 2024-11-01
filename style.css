@@ -84,6 +84,10 @@
     border-radius: 8px;
     z-index: 10;
   }
+
+  #close-modal {
+    background: #fff;
+  }
   
   /* Optional overlay behind modal */
   #overlay {
@@ -107,19 +111,6 @@
   .hidden {
     display: none;
   }
-  
-/*   #question-modal, #answer-modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #14213d;
-    padding: 20px;
-    border: 2px solid #fca311;
-    border-radius: 5px;
-    width: 300px;
-    text-align: center;
-  } */
   
   .modal-content p {
     margin-bottom: 20px;
