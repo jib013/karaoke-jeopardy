@@ -60,11 +60,16 @@ const categories = [
       { question: "Somebody That I Used To Know - Gotye & Kimbra", answer: "Gotye & Kimbra", points: 1000 }
     ]},
     { name: "Disney/Musicals", questions: [
-        { question: "What is the value of pi to two decimal places?", answer: "3.14", points: 100 },
-        { question: "What is 12 x 12?", answer: "144", points: 200 },
-        { question: "What is the square root of 81?", answer: "9", points: 300 },
-        { question: "What is 8 cubed?", answer: "512", points: 400 },
-        { question: "What gas do plants absorb?", answer: "Carbon Dioxide", points: 500 }
+        { question: "Can you feel the love tonight? - Lion King", answer: "Lion King", points: 100 },
+        { question: "Under the Sea - The Little Mermaid", answer: "The Little Mermaid", points: 200 },
+        { question: "The Bare Necessities - The Jungle Book", answer: "The Jungle Book", points: 300 },
+        { question: "How Far I'll Go - Moana", answer: "Moana", points: 400 },
+        { question: "Hakuna Matata - The Lion King", answer: "The Lion King", points: 500 },
+        { question: "Gaston - Beauty and the Beast", answer: "Beauty and the Beast", points: 600 },
+        { question: "You've Got a Friend in Me - Randy Newman", answer: "Randy Newman", points: 700 },
+        { question: "Do You Want to Build a Snowman - Frozen", answer: "Frozen", points: 800 },
+        { question: "Go the Distance - Hercules", answer: "Hercules", points: 900 },
+        { question: "Friend Like Me - Aladdin", answer: "Aladdin", points: 1000 }
       ]}
   ];
   
