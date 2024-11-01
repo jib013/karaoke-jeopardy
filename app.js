@@ -1,40 +1,65 @@
 const categories = [
-    { name: "1960-1970", questions: [
-      { question: "Who was the first president of the USA?", answer: "George Washington", points: 100 },
-      { question: "In what year did World War II end?", answer: "1945", points: 200 },
-      { question: "What year was the Declaration of Independence signed?", answer: "1776", points: 300 },
-      { question: "What is the capital of ancient Egypt?", answer: "Memphis", points: 400 },
-      { question: "What is the capital of ancient Egypt?", answer: "Memphis", points: 500 }
+    { name: "Pop Hits", questions: [
+      { question: "Anti-hero - Taylor Swift", answer: "Taylor Swift", points: 100 },
+      { question: "Wannabe - Spice Girls", answer: "Spice Girls", points: 200 },
+      { question: "I Want It That Way - Backstreet Boys", answer: "Back Street Boys", points: 300 },
+      { question: "Party in the U.S.A - Miley Cyrus", answer: "Miley Cyrus", points: 400 },
+      { question: "I Will Survie - Gloria Gaynor's", answer: "Queen", points: 500 },
+      { question: "Dancing Queen - ABBA", answer: "ABBA", points: 600 },
+      { question: "Sweet Caroline - Neil Diamond", answer: "Neil Diamond", points: 700 },
+      { question: "Someone Like You - Adele", answer: "Adele", points: 800 },
+      { question: "I Wanna Dance with Somebody (Who Loves Me) - Whitney Houston", answer: "Whitney Houston", points: 900 },
+      { question: "Oops!...I Did It Again - Brittany Spears", answer: "Brittany Spears", points: 1000 }
     ]},
-    { name: "1970-1980", questions: [
-      { question: "What planet is known as the Red Planet?", answer: "Mars", points: 100 },
-      { question: "What is the chemical symbol for water?", answer: "H2O", points: 200 },
-      { question: "What gas do plants absorb?", answer: "Carbon Dioxide", points: 300 },
-      { question: "Who developed the theory of relativity?", answer: "Albert Einstein", points: 400 },
-      { question: "What gas do plants absorb?", answer: "Carbon Dioxide", points: 500 },
+    { name: "Rock Classics", questions: [
+      { question: "Hotel California - Don Henley", answer: "Don Henley", points: 100 },
+      { question: "Livin' On a Prayer - Bon Jovi", answer: "Bon Jovi", points: 200 },
+      { question: "Don't Stop Believing - Journey", answer: "Journey", points: 300 },
+      { question: "Bohemian Rhapsody - Queen", answer: "Queen", points: 400 },
+      { question: "I Believe in a Thing Called Love - The Darkness", answer: "The Darkness", points: 500 },
+      { question: "Simple Man - Lynyrd Skynyrd", answer: "Lynyrd Skynyrd", points: 600 },
+      { question: "(You Gotta) Fight for Your Right to Party - Beastie Boys)", answer: "Beastie Boys", points: 700 },
+      { question: "Teenage Dirtbag - Wheatus", answer: "Wheatus", points: 800 },
+      { question: "Boys Are Back in Town - Thin Lizzy", answer: "Thin Lizzy", points: 900 },
+      { question: "Santeria - Sublime", answer: "Sublime", points: 1000 }
     ]},
-    { name: "1980-1990", questions: [
-      { question: "What is the largest ocean?", answer: "Pacific Ocean", points: 100 },
-      { question: "What is the capital of France?", answer: "Paris", points: 200 },
-      { question: "What country has the most natural lakes?", answer: "Canada", points: 300 },
-      { question: "Which continent is the Sahara Desert in?", answer: "Africa", points: 400 },
-      { question: "What gas do plants absorb?", answer: "Carbon Dioxide", points: 500 }
+    { name: "R&B & Soul", questions: [
+      { question: "No Scrubs - TLC", answer: "TLC", points: 100 },
+      { question: "All of Me - John Legend", answer: "John Legend", points: 200 },
+      { question: "Million Dollar Baby - Whitney Houston", answer: "Whitney Houston", points: 300 },
+      { question: "Let's Stay Together - Al Green", answer: "Al Green", points: 400 },
+      { question: "Respect - Aretha Franklin", answer: "Aretha Franklin", points: 500 },
+      { question: "No One - Alicia Keys", answer: "Alicia Keys", points: 600 },
+      { question: "Survivor - Destiny's Child", answer: "Destiny's Child", points: 700 },
+      { question: "Rolling in the Deep - Adele", answer: "Adele", points: 800 },
+      { question: "Single Ladies - Beyonce", answer: "Beyonce", points: 900 },
+      { question: "Respect - Aretha Franklin", answer: "Aretha Franklin", points: 1000 }
     ]},
-    { name: "1990-2000", questions: [
-      { question: "Who wrote 'Romeo and Juliet'?", answer: "William Shakespeare", points: 100 },
-      { question: "What is the title of the first Harry Potter book?", answer: "Harry Potter and the Philosopher's Stone", points: 200 },
-      { question: "Who wrote 'The Odyssey'?", answer: "Homer", points: 300 },
-      { question: "Who wrote 'Pride and Prejudice'?", answer: "Jane Austen", points: 400 },
-      { question: "What gas do plants absorb?", answer: "Carbon Dioxide", points: 500 }
+    { name: "Country Crooners", questions: [
+      { question: "Jolene - Dolly Parton", answer: "Dolly Parton", points: 100 },
+      { question: "Take Me Home, Country Roads - John Denver", answer: "John Denver", points: 200 },
+      { question: "Tennessee Whiskey - Chris Stapleton", answer: "Chris Stapleton", points: 300 },
+      { question: "Before He Cheats - Carrie Underwood", answer: "Carrie Underwood", points: 400 },
+      { question: "Friends in Low Places - Garth Brooks", answer: "Garth Brooks", points: 500 },
+      { question: "Wagon Wheel - Old Crow Medicine Show", answer: "Old Crow Medicine Show", points: 600 },
+      { question: "The Devil Went Down to Georgia - Charlie Daniels Band", answer: "Charlie Daniels Band", points: 700 },
+      { question: "All My Ex's Live in Texas - George Strait", answer: "George Strait", points: 800 },
+      { question: "Ring of Fire - Johnny Cash", answer: "Johnny Cash", points: 900 },
+      { question: "I Love This Bar - Toby Keith", answer: "Keith", points: 1000 }
     ]},
-    { name: "2000-2010", questions: [
-      { question: "What is the value of pi to two decimal places?", answer: "3.14", points: 100 },
-      { question: "What is 12 x 12?", answer: "144", points: 200 },
-      { question: "What is the square root of 81?", answer: "9", points: 300 },
-      { question: "What is 8 cubed?", answer: "512", points: 400 },
-      { question: "What gas do plants absorb?", answer: "Carbon Dioxide", points: 500 }
+    { name: "Duets", questions: [
+      { question: "Ain't No Mountain High Enough - Ashford & Simpson", answer: "Ashford & Simpson", points: 100 },
+      { question: "Under Pressure - Queen", answer: "Queen", points: 200 },
+      { question: "A Whole New World - Aladdin", answer: "Aladdin", points: 300 },
+      { question: "You're the One That I Want - Grease", answer: "Grease", points: 400 },
+      { question: "Empire State of Mind - Jay-Z & Alicia Keys", answer: "Jay-Z & Alicia Keys", points: 500 },
+      { question: "I Got You Babe - Sonny & Cher", answer: "Sonny & Cher", points: 600 },
+      { question: "Summer Nights - Grease", answer: "Grease", points: 700 },
+      { question: "Don't Go Breaking My Heart - Elton John", answer: "Elton John", points: 800 },
+      { question: "The Boy Is Mine - Brandy & Monica", answer: "Brandy & Monica", points: 900 },
+      { question: "Somebody That I Used To Know - Gotye & Kimbra", answer: "Gotye & Kimbra", points: 1000 }
     ]},
-    { name: "2010+", questions: [
+    { name: "Disney/Musicals", questions: [
         { question: "What is the value of pi to two decimal places?", answer: "3.14", points: 100 },
         { question: "What is 12 x 12?", answer: "144", points: 200 },
         { question: "What is the square root of 81?", answer: "9", points: 300 },
@@ -101,3 +126,5 @@ const categories = [
   }
   
   setupBoard();
+
+
