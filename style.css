@@ -72,7 +72,7 @@
   }
   
   /* Modal for question content (if you want to style the question pop-up) */
-  #question-modal {
+  #question-modal, #answer-modal {
     display: none; /* Initial hidden state */
     position: fixed;
     top: 50%;
