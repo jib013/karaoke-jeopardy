@@ -74,8 +74,39 @@ const categories = [
       ]}
   ];
   
-  let score = 0;
+  let players = {}; // Store player scores in empty array
+  let activePlayer = null; // Track the current player
   let currentQuestion = null;
+
+  function setupPlayers() {
+    const playerSelect = document.getElementById("players"); //grab the player select dropdown element
+
+    // Populate dropdown with up to 20 players
+    for (let i = 1; i <= 20; i++) {
+        const option = document.createElement("option");
+        option.value = `Player ${i}`;
+        option.textContent = `Player ${i}`;
+        playerSelect.appendChild(option);
+
+        // Initialize each player's score at 0
+        players[`Player ${i}`] = 0;
+    }
+
+    // Set event listener to change active player
+    playerSelect.addEventListener("change", (e) => {
+        activePlayer = e.target.value;
+        document.getElementById("active-player").textContent = activePlayer;
+        document.getElementById("score").textContent = players[activePlayer];
+    });
+
+    // Default active player
+    activePlayer = "Player 1";
+    playerSelect.value = activePlayer;
+    document.getElementById("active-player").textContent = activePlayer;
+    document.getElementById("score").textContent = players[activePlayer];
+  }
+
+  // let score = 0;
   
   function setupBoard() {
     const gameBoard = document.getElementById("game-board");
@@ -96,7 +127,9 @@ const categories = [
         const questionCell = document.createElement("div");
         questionCell.classList.add("question");
         questionCell.innerText = `$${question.points}`;
-        questionCell.onclick = () => openQuestionModal(question);
+        questionCell.onclick = () => openQuestionModal(question, questionCell);
+        question.answered = false; // Track if the question was answered correctly
+
         categoryContainer.appendChild(questionCell);
       });
   
@@ -105,10 +138,12 @@ const categories = [
     });
   }
 
-  function openQuestionModal(question) {
-    currentQuestion = question;
-    document.getElementById("question").innerText = question.question;
-    document.getElementById("question-modal").classList.remove("hidden");
+  function openQuestionModal(question, questionCell) {
+    if (!question.answered) {
+        currentQuestion = {...question, element: questionCell };
+        document.getElementById("question").innerText = question.question;
+        document.getElementById("question-modal").classList.remove("hidden");
+    }
   }
   
   function revealAnswer() {
@@ -116,25 +151,27 @@ const categories = [
     document.getElementById("answer-modal").classList.remove("hidden");
   }
   
-  function closeModalWindow() {
+  function closeModal(correct) {
+    if (activePlayer) {
+      if (correct) {
+        players[activePlayer] += currentQuestion.points;
+        currentQuestion.answered = true; // Mark question as answered
+        currentQuestion.element.classList.add("answered"); // Style to indicate it's been answered
+        currentQuestion.element.onclick = null; // Disable click event
+      } else {
+        players[activePlayer] -= currentQuestion.points;
+      }
+  
+      document.getElementById("score").textContent = players[activePlayer];
+    }
     document.getElementById("question-modal").classList.add("hidden");
   }
 
-  function closeModal(correct) {
-    if (correct) {
-      score += currentQuestion.points;
-    } else {
-      score -= currentQuestion.points;
-    }
-    document.getElementById("score").innerText = score;
-    currentQuestion = null;
-    document.getElementById("question-modal").classList.add("hidden");
-  }
-  
   function closeAnswerModal() {
     document.getElementById("answer-modal").classList.add("hidden");
   }
   
+  setupPlayers();
   setupBoard();
 
 
