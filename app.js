@@ -171,6 +171,10 @@ const categories = [
     document.getElementById("answer-modal").classList.add("hidden");
   }
   
+  function closeModalWindow() {
+    document.getElementById("close-modal").classList.add("hidden");
+  }
+  
   setupPlayers();
   setupBoard();
 
