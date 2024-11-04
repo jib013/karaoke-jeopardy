@@ -176,7 +176,12 @@ const categories = [
   }
 
   function playerScores () {
-    document.getElementById("player-scores").innerHTML.players;
+    // Format player scores as a list
+    let scoresHTML = Object.entries(players)
+        .map(([name, score]) => `<p>${name}: ${score}`)
+        .join('');
+    // Update the element with the formatted player scores
+    document.getElementById("player-scores").innerHTML = scoresHTML;
   }
   
   playerScores();
