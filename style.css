@@ -71,6 +71,12 @@
   .question:hover {
     background-color: #004080;
   }
+
+  .answered {
+    background-color: #d3d3d3;
+    color: #a9a9a9;
+    cursor: not-allowed;
+  }
   
   /* Modal for question content (if you want to style the question pop-up) */
   #question-modal, #answer-modal {
