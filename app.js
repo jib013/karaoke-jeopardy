@@ -179,6 +179,7 @@ const categories = [
     document.getElementById("player-scores").innerHTML.players;
   }
   
+  playerScores();
   setupPlayers();
   setupBoard();
 
