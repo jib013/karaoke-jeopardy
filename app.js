@@ -172,7 +172,7 @@ const categories = [
   }
   
   function closeModalWindow() {
-    document.getElementById("close-modal").classList.add("hidden");
+    document.getElementById("question-modal").classList.add("hidden");
   }
   
   setupPlayers();
