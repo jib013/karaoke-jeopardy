@@ -163,6 +163,7 @@ const categories = [
       }
   
       document.getElementById("score").textContent = players[activePlayer];
+      playerScores();  // Update the score display
     }
     document.getElementById("question-modal").classList.add("hidden");
   }
@@ -184,7 +185,6 @@ const categories = [
     document.getElementById("player-scores").innerHTML = scoresHTML;
   }
   
-  playerScores();
   setupPlayers();
   setupBoard();
 
