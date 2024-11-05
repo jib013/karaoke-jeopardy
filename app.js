@@ -179,7 +179,7 @@ const categories = [
   function playerScores () {
     // Format player scores as a list
     let scoresHTML = Object.entries(players)
-        .map(([name, score]) => `<p>${name}: ${score}`)
+        .map(([name, score]) => `<div class="score-box"><span class="p-name">${name}:</span><br /><span class="p-score">${score}</span></div>`)
         .join('');
     // Update the element with the formatted player scores
     document.getElementById("player-scores").innerHTML = scoresHTML;
