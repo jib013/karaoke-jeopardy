@@ -163,6 +163,7 @@ const categories = [
       }
   
       document.getElementById("score").textContent = players[activePlayer];
+      playerScores();  // Update the score display
     }
     document.getElementById("question-modal").classList.add("hidden");
   }
@@ -172,7 +173,16 @@ const categories = [
   }
   
   function closeModalWindow() {
-    document.getElementById("close-modal").classList.add("hidden");
+    document.getElementById("question-modal").classList.add("hidden");
+  }
+
+  function playerScores () {
+    // Format player scores as a list
+    let scoresHTML = Object.entries(players)
+        .map(([name, score]) => `<div class="score-box"><span class="p-name">${name}:</span><br /><span class="p-score">${score}</span></div>`)
+        .join('');
+    // Update the element with the formatted player scores
+    document.getElementById("player-scores").innerHTML = scoresHTML;
   }
   
   setupPlayers();
