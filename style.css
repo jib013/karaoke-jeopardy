@@ -18,11 +18,34 @@
     font-size: 1.5em;
     margin: 20px;
   }
+
+  #player-scores {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+  }
+
+  .score-box {
+    height: 62px;
+    border: 1px solid #fff;
+    padding: 15px 20px;
+    margin: 0px 0px 5px;
+  }
+
+  .p-name {
+    width: auto;
+  }
+
+  .p-score {
+    width: auto;
+  }
   
   /* Game board container */
   #game-board {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6 columns for each category */
+    grid-template-columns: repeat(7, 1fr); /* 6 columns for each category */
     gap: 5px;
     max-width: 1000px;
     margin: 0 auto;
@@ -46,10 +69,9 @@
     justify-content: center; /* Horizontally centers the content */
     background-color: blue;
     font-size: 1.2rem;
-    font-weight: bold;
     text-align: center;
     width: 100%;
-    height: 100px;
+    height: 62px;
     border: 2px solid #666;
   }
   
