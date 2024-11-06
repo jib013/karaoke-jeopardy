@@ -20,16 +20,15 @@
   }
 
   #player-scores {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(1, 1fr);
     align-items: center;
-    justify-content: center;
-    margin: 0px auto;
+    justify-content: center; */
+    text-align: left;
   }
 
   .score-box {
-    height: 62px;
-    border: 1px solid #fff;
+    height: auto;
     padding: 15px 20px;
     margin: 0px 0px 5px;
   }
