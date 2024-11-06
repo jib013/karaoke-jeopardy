@@ -79,35 +79,49 @@ const categories = [
   let currentQuestion = null;
 
   function setupPlayers() {
-    const playerSelect = document.getElementById("players"); //grab the player select dropdown element
+    const maxPlayers = 20;
+    const playerCount = prompt("How many players are playing? (Enter a number up to 20)", "2");
+    //const playerSelect = document.getElementById("players"); //grab the player select dropdown element
 
-    // Populate dropdown with up to 20 players
-    for (let i = 1; i <= 20; i++) {
-        const option = document.createElement("option");
-        option.value = `Player ${i}`;
-        option.textContent = `Player ${i}`;
-        playerSelect.appendChild(option);
+    // Validate and limit player count
+    const numPlayers = Math.min(parseInt(playerCount), maxPlayers);
 
-        // Initialize each player's score at 0
-        players[`Player ${i}`] = 0;
+    // Prompt for player names and set initial scores
+    for (let i = 1; i <= numPlayers; i++) {
+        const playerName = prompt(`Enter name for Player ${i}:`);
+
+        if (playerName) {
+            players[playerName] = 0; // Initialize player's score
+            addPlayerOption(playerName); // Add player to dropdown
+        }
     }
 
-    // Set event listener to change active player
-    playerSelect.addEventListener("change", (e) => {
-        activePlayer = e.target.value;
-        document.getElementById("active-player").textContent = activePlayer;
-        document.getElementById("score").textContent = players[activePlayer];
-    });
+    // Set first player as default active player
+    const firstPlayer = Object.keys(players)[0];
 
-    // Default active player
-    activePlayer = "Player 1";
-    playerSelect.value = activePlayer;
+    if (firstPlayer) {
+        setActivePlayer(firstPlayer);
+    }
+}
+
+function addPlayerOption(name) {
+    const playerSelect = document.getElementById("players");
+    const option = document.createElement("option");
+    option.value = name;
+    option.textContent = name;
+    playerSelect.appendChild(option);
+}
+
+function setActivePlayer(playerName) {
+    activePlayer = playerName;
     document.getElementById("active-player").textContent = activePlayer;
     document.getElementById("score").textContent = players[activePlayer];
-  }
+}
 
-  // let score = 0;
-  
+document.getElementById("players").addEventListener("change", (e) => {
+    setActivePlayer(e.target.value);
+});
+
   function setupBoard() {
     const gameBoard = document.getElementById("game-board");
   
@@ -165,6 +179,7 @@ const categories = [
       document.getElementById("score").textContent = players[activePlayer];
       playerScores();  // Update the score display
     }
+
     document.getElementById("question-modal").classList.add("hidden");
   }
 
@@ -178,7 +193,7 @@ const categories = [
 
   function playerScores () {
     // Format player scores as a list
-    let scoresHTML = Object.entries(players)
+    const scoresHTML = Object.entries(players)
         .map(([name, score]) => `<div class="score-box"><span class="p-name">${name}:</span><br /><span class="p-score">${score}</span></div>`)
         .join('');
     // Update the element with the formatted player scores
